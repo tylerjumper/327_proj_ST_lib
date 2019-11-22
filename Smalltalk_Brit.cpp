@@ -1,3 +1,10 @@
+//
+/*
+ * Smalltalk_Brit.cpp
+ *
+ *  Created on: Nov 21, 2019
+ *      Author: Tyler Jumper
+ */
 #pragma once
 #include "./includes/Smalltalk.h"
 #include "./includes/constants.h"
@@ -15,6 +22,7 @@
 
 	}
 	void Smalltalk_Brit::populatePhrases(){
+		//populate this with the Brit sayings
 		mySmallTalk.push_back(BRIT_1);
 		mySmallTalk.push_back(BRIT_2);
 		mySmallTalk.push_back(BRIT_3);

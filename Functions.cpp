@@ -2,7 +2,7 @@
 /*
  * Functions.cpp
  *
- *  Created on: nov 21, 2019
+ *  Created on: Nov 21, 2019
  *      Author: Tyler Jumper
  */
 #include <iostream>
@@ -48,12 +48,12 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 		if(numWatches <= numPeople){
 			for(int i = 0 ; i < numWatches ; i++){
 				std::unique_ptr<Watch> newWatch (new Watch);
-				theVector[i]->giveWatch(newWatch);
+				theVector[i]->giveWatch(newWatch);		//give a new watch to the person in the vector of people
 			}
 		}else if(numWatches > numPeople){
 			for(int i = 0 ; i < numPeople ; i++){
 				std::unique_ptr<Watch> newWatch (new Watch);
-				theVector[i]->giveWatch(newWatch);
+				theVector[i]->giveWatch(newWatch);		//give a new watch to the person in the vector of people
 			}
 		}
 

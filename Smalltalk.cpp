@@ -1,4 +1,11 @@
-#pragma once
+
+//
+/*
+ * SmallTalk.cpp
+ *
+ *  Created on: Nov 21, 2019
+ *      Author: Tyler Jumper
+ */#pragma once
 #include <string>
 #include <vector>
 #include <memory>
@@ -26,10 +33,10 @@ bool hasWatch;
 	std::string Smalltalk::saySomething(){
 		if(current_phrase < int(mySmallTalk.size())){
 			current_phrase++;
-			return mySmallTalk[current_phrase-1];
+			return mySmallTalk[current_phrase-1];	// current_phrase-- because we need to increment current_phrase before we return
 		}else{
-			current_phrase = 1;
-			return mySmallTalk[0];
+			current_phrase = 1;			//set equal to 1 because the phrase at 0 will be returned
+			return mySmallTalk[0];		//so the next phrase it will iterate over is at index 1
 		}
 	}
 
@@ -46,11 +53,11 @@ bool hasWatch;
 	//if this object has a watch it is taken away, otherwise an empty unique_ptr is returned
 	// This transaction simulates giving away a watch
 	std::unique_ptr<Watch> Smalltalk::takeWatch(){
-		std::unique_ptr<Watch> tmpWatch;
+		std::unique_ptr<Watch> tmpWatch;		//create a new unique pointer
 		if(this->pWatch != 0){
-			tmpWatch = move(pWatch);
+			tmpWatch = move(pWatch);			//move the pointer to pWatch
 		}else{
-			tmpWatch = 0;
+			tmpWatch = 0;		//if the object doesn't have a watch then set tmpWatch to an empty unique pointer
 		}
 		return tmpWatch;
 	}
@@ -59,7 +66,7 @@ bool hasWatch;
 	//otherwise accept watch (return true) and set this->pWatch=pWatch (use std::move)
 	bool Smalltalk::giveWatch(std::unique_ptr<Watch> &pWatch){
 		if(this->pWatch == 0){
-			this->pWatch=std::move(pWatch);
+			this->pWatch=std::move(pWatch);		//set the objects watch to pWatch
 			return true;
 		}
 		return false;

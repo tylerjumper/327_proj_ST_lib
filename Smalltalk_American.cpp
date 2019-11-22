@@ -1,4 +1,11 @@
-#pragma once
+
+//
+/*
+ * SmallTalk_American.cpp
+ *
+ *  Created on: Nov 21, 2019
+ *      Author: Tyler Jumper
+ */#pragma once
 #include <vector>
 #include "./includes/Smalltalk.h"
 #include "./includes/constants.h"
@@ -20,7 +27,7 @@
 
 	}
 	void Smalltalk_American::populatePhrases(){
-			//populate this with the American sayings
+		//populate this with the American sayings
 		mySmallTalk.push_back(AMERICAN_PHRASE_1);
 		mySmallTalk.push_back(AMERICAN_PHRASE_2);
 		mySmallTalk.push_back(AMERICAN_PHRASE_3);

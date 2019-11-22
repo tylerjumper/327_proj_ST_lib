@@ -1,3 +1,10 @@
+//
+/*
+ * ST_American_DonutEnthusiest.cpp
+ *
+ *  Created on: Nov 21, 2019
+ *      Author: Tyler Jumper
+ */
 #pragma once
 #include "./includes/Smalltalk_American.h"
 #include "./includes/ST_American_DonutEnthusiest.h"
@@ -17,6 +24,7 @@
 	//the end result is mySmallTalk will contain first the base class phrases and
 	//then this classes phrases
 	void ST_American_DonutEnthusiest::populatePhrases(){
+		//populate this with the American sayings and Donut sayings
 		mySmallTalk.push_back(AMERICAN_PHRASE_1);
 		mySmallTalk.push_back(AMERICAN_PHRASE_2);
 		mySmallTalk.push_back(AMERICAN_PHRASE_3);
