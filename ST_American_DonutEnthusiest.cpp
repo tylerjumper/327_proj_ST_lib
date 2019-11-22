@@ -1,11 +1,15 @@
 #pragma once
 #include "./includes/Smalltalk_American.h"
-class ST_American_DonutEnthusiest :
-	public Smalltalk_American
-{
-	//create with appropriate phrases
-	ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i) : Smalltalk_American(i){
+#include "./includes/ST_American_DonutEnthusiest.h"
 
+#include "./includes/constants.h"
+
+//class ST_American_DonutEnthusiest :
+//	public Smalltalk_American
+//{
+	//create with appropriate phrases
+	ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i) : Smalltalk_American(AMERICAN, i){
+		this->populatePhrases();
 	}
 
 	ST_American_DonutEnthusiest::~ST_American_DonutEnthusiest(void){
@@ -17,13 +21,16 @@ class ST_American_DonutEnthusiest :
 	//the end result is mySmallTalk will contain first the base class phrases and
 	//then this classes phrases
 	void ST_American_DonutEnthusiest::populatePhrases(){
-				//populate this with the Donut sayings
-				/*
-				 *  "Krispy Kreme is the bees knees!";
-				 *	"Dunkin Donuts is a horrendous, disappointing compromise";
-				 *	"...Jelly..donuts..are..an..abomination...";
-				 *	"If \'Hot Donuts Now\' is lit, I\'m stopping";
-				 *	"I\'m thinking a dozen hots, you want anything?";
-				 * */
+		mySmallTalk.push_back(AMERICAN_PHRASE_1);
+		mySmallTalk.push_back(AMERICAN_PHRASE_2);
+		mySmallTalk.push_back(AMERICAN_PHRASE_3);
+		mySmallTalk.push_back(AMERICAN_PHRASE_4);
+		mySmallTalk.push_back(AMERICAN_PHRASE_5);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_1);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_2);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_3);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_4);
+		mySmallTalk.push_back(AMERICAN_DE_PHRASE_5);
+
 	}
-};
+//};

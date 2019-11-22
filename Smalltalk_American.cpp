@@ -2,15 +2,14 @@
 #include <vector>
 #include "./includes/Smalltalk.h"
 #include "./includes/constants.h"
+#include "./includes/Smalltalk_American.h"
 
 
-class Smalltalk_American :
-	public Smalltalk
-{
+
 	//create with appropriate phrases
 	//use base class call to set Nationality (See constants for Nationality strings)
 	Smalltalk_American::Smalltalk_American(int iPerson) : Smalltalk(AMERICAN, iPerson){
-
+		this->populatePhrases();
 	}
 
 	Smalltalk_American::Smalltalk_American(std::string myNationality,int iPerson): Smalltalk(AMERICAN, iPerson){
@@ -21,14 +20,12 @@ class Smalltalk_American :
 
 	}
 	void Smalltalk_American::populatePhrases(){
-				//populate this with the American sayings
-						/*
-						 *  "Yall from round here?";
-						 *	"Why yes, I would like to supersize that"
-						 *	"Im off to the beach for a one day va-cay"
-						 *	"The mets are gonna take the pennant this year"
-						 *	"I cant see that happening this year"
-						 *
-						 * */
+			//populate this with the American sayings
+
+		mySmallTalk.push_back(AMERICAN_PHRASE_1);
+		mySmallTalk.push_back(AMERICAN_PHRASE_2);
+		mySmallTalk.push_back(AMERICAN_PHRASE_3);
+		mySmallTalk.push_back(AMERICAN_PHRASE_4);
+		mySmallTalk.push_back(AMERICAN_PHRASE_5);
 	}
-};
+
