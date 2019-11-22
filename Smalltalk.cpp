@@ -41,16 +41,19 @@ bool hasWatch;
 			return "THE_CURRENT_TIME_IS:"+ pWatch->getTime();
 		}
 		return I_DO_NOT_HAVE_A_WATCH;
-	}//*******
+	}
 
 	//if this object has a watch it is taken away, otherwise an empty unique_ptr is returned
 	// This transaction simulates giving away a watch
 	std::unique_ptr<Watch> Smalltalk::takeWatch(){
+		std::unique_ptr<Watch> tmpWatch;
 		if(this->pWatch != 0){
-			this->pWatch = 0;
+			tmpWatch = move(pWatch);
+		}else{
+			tmpWatch = 0;
 		}
-		return std::unique_ptr<Watch>{};
-	}//*******
+		return tmpWatch;
+	}
 
 	//if already have a watch then return false and dont change pWatch pointer
 	//otherwise accept watch (return true) and set this->pWatch=pWatch (use std::move)

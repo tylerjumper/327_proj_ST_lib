@@ -48,17 +48,18 @@ std::vector<std::unique_ptr<Smalltalk>> getPeople(int numBrit,
 		if(numWatches <= numPeople){
 			for(int i = 0 ; i < numWatches ; i++){
 				std::unique_ptr<Watch> newWatch (new Watch);
-				if(theVector[i]->giveWatch(newWatch)){
-					numWatches--;
-				}
-
+				theVector[i]->giveWatch(newWatch);
+//				if(theVector[i]->giveWatch(newWatch)){
+//					numWatches--;
+//				}
 			}
 		}else if(numWatches > numPeople){
 			for(int i = 0 ; i < numPeople ; i++){
 				std::unique_ptr<Watch> newWatch (new Watch);
-				if(theVector[i]->giveWatch(newWatch)){
-					numWatches--;
-				}
+				theVector[i]->giveWatch(newWatch);
+//				if(theVector[i]->giveWatch(newWatch)){
+//					numWatches--;
+//				}
 
 			}
 
