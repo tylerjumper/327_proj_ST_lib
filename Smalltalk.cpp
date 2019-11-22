@@ -59,7 +59,6 @@ bool hasWatch;
 	//otherwise accept watch (return true) and set this->pWatch=pWatch (use std::move)
 	bool Smalltalk::giveWatch(std::unique_ptr<Watch> &pWatch){
 		if(this->pWatch == 0){
-
 			this->pWatch=std::move(pWatch);
 			return true;
 		}

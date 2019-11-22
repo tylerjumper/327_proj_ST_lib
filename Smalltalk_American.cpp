@@ -21,7 +21,6 @@
 	}
 	void Smalltalk_American::populatePhrases(){
 			//populate this with the American sayings
-
 		mySmallTalk.push_back(AMERICAN_PHRASE_1);
 		mySmallTalk.push_back(AMERICAN_PHRASE_2);
 		mySmallTalk.push_back(AMERICAN_PHRASE_3);

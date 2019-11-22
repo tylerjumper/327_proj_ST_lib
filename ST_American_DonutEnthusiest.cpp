@@ -1,12 +1,8 @@
 #pragma once
 #include "./includes/Smalltalk_American.h"
 #include "./includes/ST_American_DonutEnthusiest.h"
-
 #include "./includes/constants.h"
 
-//class ST_American_DonutEnthusiest :
-//	public Smalltalk_American
-//{
 	//create with appropriate phrases
 	ST_American_DonutEnthusiest::ST_American_DonutEnthusiest(int i) : Smalltalk_American(AMERICAN, i){
 		this->populatePhrases();
@@ -33,4 +29,4 @@
 		mySmallTalk.push_back(AMERICAN_DE_PHRASE_5);
 
 	}
-//};
+
